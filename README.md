@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/raspberrypi/documentation.svg?branch=master)](https://travis-ci.org/raspberrypi/documentation)
 
-Ceci est la traduction française de la documentation officielle pour le Raspberry Pi, ecrite par la [Raspberry Pi Foundation](https://www.raspberrypi.org/) avec les contributions de la communauté.
+Ceci est une traduction française de la documentation officielle pour le Raspberry Pi, ecrite par la [Raspberry Pi Foundation](https://www.raspberrypi.org/) avec les contributions de la communauté.
+
+Traduction en cours...
 
 ## Contenu
 
