@@ -2,41 +2,41 @@
 
 [![Build Status](https://travis-ci.org/raspberrypi/documentation.svg?branch=master)](https://travis-ci.org/raspberrypi/documentation)
 
-This is the official documentation for the Raspberry Pi, written by the [Raspberry Pi Foundation](https://www.raspberrypi.org/) with community contributions.
+Ceci est la traduction française de la documentation officielle pour le Raspberry Pi, ecrite pa la [Raspberry Pi Foundation](https://www.raspberrypi.org/) avec les contributions de la communauté.
 
-## Contents
+## Contenu
 
-- [Setup / Quickstart](setup/README.md)
-    - Getting started with your Raspberry Pi, including what you need and how to get it booted
+- [Paramétrage / Démarrage rapide](setup/README.md)
+    - Comment utiliser votre Raspberry Pi, inclus ce dont vous avez besoin et comment démarrer
 - [Installation](installation/README.md)
-    - Installing an operating system on your Raspberry Pi
-- [Usage Guide](usage/README.md)
-    - Explore the desktop and try out all the main applications
+    - Installation du système d'explotation (OS) sur votre Raspberry Pi
+- [Guide d'utilisation](usage/README.md)
+    - Exploration du bureau et essai de toute les applications principales
 - [Configuration](configuration/README.md)
-    - Configuring the Pi's settings to suit your needs
-- [Remote Access](remote-access/README.md)
-    - Accessing your Pi remotely via SSH, VNC or over the web
+    - Configuration des paramètres indispensables du Pi
+- [Accès à distance](remote-access/README.md)
+    - Accédez à votre Pi à distance via SSH, VNC ou depuis le Web
 - [Linux](linux/README.md)
-    - Fundamental Linux usage for beginners and more advanced information for power users
+    - Fondamentaux de l'utilisation de Linux pour les débutants et plus d'informations pour les utilisateurs avancés
 - [Raspbian](raspbian/README.md)
-    - Information about the recommended operating system for Raspberry Pi
-- [Hardware](hardware/README.md)
-    - Technical specifications about the Raspberry Pi hardware and the camera module
+    - Information sur le système d'exploitation recommandé du Raspberry Pi
+- [Matériel](hardware/README.md)
+    - Spécifications techniques à propos du matériel du Raspberry Pi et du module caméra
 
 ## Contributions
 
-If you have anything to fix or details to add, first [file an issue](http://github.com/raspberrypi/documentation/issues) on GitHub to see if it is likely to be accepted, then file a pull request with your change (one PR per issue).
+Si vous avez des détails à corriger ou à ajouter, en premier lieu [signalez un issue](http://github.com/raspberrypi/documentation/issues) sur GitHub pour voir si vous seriez accepté, puis faites un pull request avec vos modifications (une PR par issue).
 
-This is not intended to be an open wiki; we want to keep it concise and minimal but will accept fixes and suitable additions.
+Ceci n'est pas un Wiki ouvert; nous le souhaitons aussi concis et minimal que possible mais nous acceptons les corrections et les ajouts justifiés.
 
-See our [contributing policy](CONTRIBUTING.md).
+Voir nos [règles de contribution](CONTRIBUTING.md).
 
 ## Licence
 
-Unless otherwise specified, everything in this repository is covered by the following licence:
+Sauf indication contraire, l'ensemble de ce repository est couvert par la licence suivante:
 
 [![Creative Commons Attribution-ShareAlike 4.0 International](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ***Raspberry Pi Documentation*** by the [Raspberry Pi Foundation](https://www.raspberrypi.org/) is licensed under a [Creative Commons Attribution 4.0 International Licence](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Based on a work at https://github.com/raspberrypi/documentation
+Basé sur un travail disponible sur https://github.com/raspberrypi/documentation
