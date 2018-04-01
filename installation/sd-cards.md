@@ -1,27 +1,27 @@
-# SD cards
+# Cartes SD
 
-The Raspberry Pi should work with any compatible SD card, although there are some guidelines that should be followed:
+Le Raspberry Pi peut fonctionner avec toute carte SD compatible, toutefois les quelques recommandations suivantes doivent être observées:
 
-## SD card size (capacity). 
+## Taille de carte SD (capacité). 
 
-For installation of NOOBS or the image installation of Raspbian, the minimum recommended card size is 8GB. For Raspbian Lite image installations we recommend a minimum of 4GB. Some distributions, specifically LibreELEC and Arch, can run on much smaller cards. If you're planning to use a card of 64GB or more with NOOBS, see [this page](sdxc_formatting.md) first.
+Pour l'installation d'une image NOOBS ou d'une image de Raspbian, la taille minimum recommandée est 8Go. Pour une image Raspbian Lite nous recommandons un minimum de 4Go. Plusieurs distributions, spécialement LibreELEC et Arch, peuvent fonctionner avec des cartes d'une taille inférieure. Si vous projetez d'utiliser une carte de 4Go ou plus avec NOOBS voyez d'abord [cette page](sdxc_formatting.md).
 
-## SD card class. 
+## Classe de carte SD. 
 
-The card class determines the sustained write speed for the card; a class 4 card will be able to write at 4MB/s, whereas a class 10 should be able to attain 10 MB/s. However, it should be noted that this does not mean a class 10 card will outperform a class 4 card for general usage, because often this write speed is achieved at the cost of read speed and increased seek times.
+La classe d'une carte détermine sa vitesse moyenne d'écriture; une cate de classe 4 sera capable d'écrire à une vitesse de 4Mo/s, alors qu'une classe 10 serait capable d'atteindre 10Mo/s. De toute manière, vous devriez noter que vous ne pouvez attendre les même performance du classe 10 et d'une classe 4 pour un usage général, en effet cette vitesse d'écriture atteinte a un impacte sur la vitesse de lecture et sur le temps de recherche.
 
-## SD card physical size. 
+## Taille physique de carte SD. 
 
-The original Raspberry Pi Model A and Raspberry Pi Model B require full-size SD cards. The newer [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/), [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/), [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/), [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/), and [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) require micro SD cards.
+Le modèle orignal des Raspberry Pi Model A et Raspberry Pi Model B rnécessite une carte SD de dimension full-size. Les nouveaux [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model/), [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b/), [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/), [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/), et [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) nécessite une carte au format micro SD.
 
-## Troubleshooting
+## Dysfonctionnement
 
-We recommend buying the Raspberry Pi SD card which is available [here](https://shop.pimoroni.com/products/noobs-8gb-sd-card), as well as from other retailers; this is an 8GB class 6 micro SD card (with a full-size SD adapter) that outperforms almost all other SD cards on the market and is a good value solution.
+Nous recommandons d'acheter une carte SD pour Raspberry Pi disponible [ici](https://shop.pimoroni.com/products/noobs-8gb-sd-card), mais aussi chez d'autres revendeurs; c'est une carte de classe 6 au format micro SD d'une capacité de 8Go (avec un adaptateur full-size) qui a les mêmes performances que d'autres cartes SD du marché et qui est une solution valable.
 
-If you are having trouble with corruption of your SD cards, make sure you follow these steps:
+Si vous rencontrez de corruption de vos cartes SD, assurez-vous de respecter ces étapes:
 
-1. Make sure you are using a genuine SD card. There are many cheap SD cards available which are actually smaller than advertised or which will not last very long.
-2. Make sure you are using a good quality power supply. You can check your power supply by measuring the voltage between TP1 and TP2 on the Raspberry Pi; if this drops below 4.75V when doing complex tasks then it is most likely unsuitable.
-3. Make sure you are using a good quality USB cable for the power supply. When using a lower quality power supply, the TP1->TP2 voltage can drop below 4.75V. This is generally due to the resistance of the wires in the USB power cable; to save money, USB cables have as little copper in them as possible, and as much as 1V (or 1W) can be lost over the length of the cable.
-4. Make sure you are shutting your Raspberry Pi down properly before powering it off. Type `sudo halt` and wait for the Pi to signal it is ready to be powered off by flashing the activity LED.
-5. Finally, corruption has been observed if you are overclocking the Pi. This problem has been fixed previously, although the workaround used may mean that it can still happen. If after checking the steps above you are still having problems with corruption, please let us know.
+1. Assurez-vous d'utiliser une carte SD de marque. Beaucoup de cartes disponibles sur le marché nsont en réalité plus petites que la capacité annoncée ou ne durent pas très longtemps.
+2. Assurez-vous d'utiliser une alimentation de bonne qualité. Vous pouvez contrôler cette alimentation avec un contrôleur de tension, elle doit fournir une tension située entre TP1 et TP2 sur le Raspberry Pi; si celle-ci chutte en dessous de 4.75V quand vous effectuez une tâche complexe alors c'est que vous rencontrerez des problèmes.
+3. Assurez-vous de la qualité du cable USB utilisé pour l'alimentation. Si vous utilisez une alimentation de mauvaise qualité la tension TP1->TP2 peut descendre sous les 4.75V. Ceci est généralement le résultat de la résistance de cable; pour économiser de l'argent, les cables USB ont une section la plus petite possible et ainsi provoquer une perte de 1V (ou 1W) selon la longueur.
+4. Assurez-vous d'arrêter correctement votre Raspberry Pi avant de débrancher l'alimentation. Exécutez la commande `sudo halt` et attendez que le Pi signale qu'il est prêt à être débranché en faisant clignoter la LED d'activité.
+5. Enfin, des corruptions ont été observées dans le cas de l'overclocking le Pi. Ce problème a été réglé précédemment, mais la solution utilisée peut se révéler inefficace. Si après vérification de ces étapes vous rencontrez toujours des problèmes de coruption faites le nous savoir.
