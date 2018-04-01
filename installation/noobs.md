@@ -6,7 +6,7 @@
 
 ## Comment obtenir NOOBS
 
-### Acaht d'une carte pré-installée
+### Achat d'une carte pré-installée
 
 Les cartes SD avec NOOBS pré-installé sont disponible auprès de nombreux disributeurs et revendeurs indépendants, y compris  [Pimoroni](https://shop.pimoroni.com/products/noobs-8gb-sd-card), [Adafruit](https://www.adafruit.com/products/1583), et [Pi Hut](http://thepihut.com/collections/raspberry-pi-sd-cards-and-adapters/products/noobs-preinstalled-sd-card).
 
