@@ -1,36 +1,36 @@
-# Installing operating system images
+# Installation d'images de système d'exploitation
 
-This resource explains how to install a Raspberry Pi operating system image on an SD card. You will need another computer with an SD card reader to install the image.
+Ceci explique comment installer un système d'exploitation pour le Raspberry Pi sur une carte SD card. Vous aurez besoin d'un autre ordinateur avec un lecteur de carte SD pour installer l'image.
 
-We recommend most users download [NOOBS](../noobs.md), which is designed to be very easy to use. However, more advanced users looking to install a particular image should use this guide.
+Nous recommandons à la plupart des utilisateurs de télécharher [NOOBS](../noobs.md), qui est spécialement conçu pour être simple à utiliser. De toute façon, pour les utilisateurs avancés, il sera intéressant de lire ceci pour installer une image particulière.
 
-## Download the image
+## Télécharger l'image
 
-Official images for recommended operating systems are available to download from the Raspberry Pi website [Downloads page](https://www.raspberrypi.org/downloads/).
+Les images officielles pour les systèmes d'exploitation recommandés sont disponibles en téléchargement depuis le site Raspberry Pi, voir la [page de téléchargement](https://www.raspberrypi.org/downloads/).
 
-Alternative distributions are available from third-party vendors.
+Des distributions alternatives sont mis à disposition par d'autres revendeurs.
 
-If you're not using Etcher (see below), you'll need to unzip `.zip` downloads to get the image file (`.img`) to write to your SD card.
+Si vous n'utiliser pas Etcher (voir plus loin), vous aurez besoin de décompresser les fichiers `.zip` téléchargés pour récupérer un fichier image (`.img`) à écrire sur votre carte SD.
 
-**Note**: the Raspbian with PIXEL image contained in the ZIP archive is over 4GB in size and uses the [ZIP64](https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64) format. To uncompress the archive, a unzip tool that supports ZIP64 is required. The following zip tools support ZIP64:
+**Note**: l'image Raspbian avec PIXEL contient une archive ZIP de 4Go et utilise le format [ZIP64](https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64). Pour décompresser l'archive, un outil de décompression supportant le ZIP64 est nécessaire. Les outils suivants supportent le ZIP64:
 
 - [7-Zip](http://www.7-zip.org/) (Windows)
 - [The Unarchiver](http://unarchiver.c3.cx/unarchiver) (Mac)
 - [Unzip](http://www.info-zip.org/mans/unzip.html) (Linux)
 
-## Writing an image to the SD card
+## Ecrire une image sur la carte SD
 
-You will need to use an image writing tool to install the image you have downloaded on your SD card.
+Vous devrez utiliser un outil d'écriture pour installer une image, que vous avez téléchargé, sur votre carte SD.
 
-**Etcher** is a graphical SD card writing tool that works on Mac OS, Linux and Windows, and is the easiest option for most users. Etcher also supports writing images directly from the zip file, without any unzipping required. To write your image with Etcher:
+**Etcher** est un outil graphique pour carte SD qui fonctionne sous Mac OS, Linux et Windows, il est simple et facile à mettre en oeuvre pour la plupart des utilisateurs. Etcher supporte aussi l'écriture directe des images depuis le fichier zip, sans décompression préalable. Pour écrire votre image avec Etcher:
 
-- Download [Etcher](https://etcher.io/) and install it.
-- Connect an SD card reader with the SD card inside.
-- Open Etcher and select from your hard drive the Raspberry Pi `.img` or `.zip` file you wish to write to the SD card.
-- Select the SD card you wish to write your image to.
-- Review your selections and click 'Flash!' to begin writing data to the SD card.
+- Téléchargez [Etcher](https://etcher.io/) et installez le.
+- Connectez un lecteur de carte SD, et insérez votre carte.
+- Ouvrez Etcher et sélectionnez le fichier image du Raspberry Pi (`.img` ou `.zip`) que vous souhaitez écrire sur la carte SD.
+- Selectionnez la carte SD sur laquelle écrire l'image.
+- Vérifiez vos sélections et appuyez sur 'Flash!' pour commence l'écriture des données sur la carte SD.
 
-For more advanced control of this process, see our system-specific guides:
+Pour le contrôle avancé du processus, reportez-vous à notre guide spécifique à votre système:
 
 - [Linux](linux.md)
 - [Mac OS](mac.md)
