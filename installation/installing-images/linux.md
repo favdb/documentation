@@ -1,56 +1,56 @@
-# Installing operating system images on Linux
+# Installation d'images de système d'exploitation sous Linux
 
-[Etcher](README.md) is typically the easiest option for most users to write images to SD cards, so it is a good place to start. If you're looking for more advanced options on Linux, you can use the standard command line tools below.
+[Etcher](README.md) est typiquement l'option la plus facile pour la plupart des utilisateurs pour écrire des images sur cartes SD, aussi voici le meilleur endroit pour commencer. Si vous cherchez des options avancées sous Linux, vous pouvez utiliser la ligne de commande comme suit.
 
-**Note**: use of the `dd` tool can overwrite any partition of your machine. If you specify the wrong device in the instructions below, you could delete your primary Linux partition. Please be careful.
+**Note**: l'utilisation de l'outil `dd` peut écraser toute partition de votre machine. Si vous indiquez le mauvais périphérique dans les instructions qui suivent vous pourriez supprimer votre partition primaire contenant Linux. Soyez vigilent.
 
-### Discovering the SD card mountpoint and unmounting it
-- Run `lsblk` to see which devices are currently connected to your machine.
+### Découverte du point de montage de la carte SD et son démontage
+- Exécutez la commande `lsblk` pour voir quels sont les matériels actuellement connectés à votre machine.
 
-- If your computer has a slot for SD cards, insert the card. If not, insert the card into an SD card reader, then connect the reader to your computer.
+- Si votre ordinateur dispose d'un lecteur de carte SD, insérez une carte. Sinon, insérerez une carte dans un lecteure externe et connectez le à votre ordinateur.
 
-- Run `lsblk` again. The new device that has appeared is your SD card (you can also usually tell from the listed device size). The naming of the device will follow the format described in the next paragraph.
+- Exécutez à nouveau la commande `lsblk`. Le nouveau périphérique qui apparaît est votre carte SD (vous pouvez aussi utiliser `tell` depuis la liste des périphérique). Le nom du matériel suit le format décrit dans le paragraphe suivant.
 
-- The left column of the results from the `lsblk` command gives the device name of your SD card and the names of any paritions on it (usually only one, but there may be several if the card was previously used). It will be listed as something like `/dev/mmcblk0` or `/dev/sdX` (with partition names `/dev/mmcblk0p1` or `/dev/sdX1` respectively), where `X` is a lower-case letter indicating the device (eg. `/dev/sdb1`). The right column shows where the partitions have been mounted (if they haven't been, it will be blank).
+- La colonne de gauche de la liste restituée par la commande `lsblk` donne le nom de votre périphérique lecteur de carte SD, ainsi que le nom de toutes les partitions reconnues (habituellement il n'y en a qu'une, mais il paut aussi y en avoir plusieurs si la carte a déjà été utilisée). Ce sera listé sous la forme `/dev/mmcblk0` ou `/dev/sdX` (avec les noms de partition associées comme `/dev/mmcblk0p1` ou `/dev/sdX1`), où `X` est une lettre en minuscule indiquant le périphérique (par exemple `/dev/sdb1`). La colonne de droite indique la localisation du point de montage dans le système (un espace vide indique que le périphérique n'est pas monté).
 
-- If any partitions on the SD card have been mounted, unmount them all with `umount`, for example `umount /dev/sdX1` (replace `sdX1` with your SD card's device name, and change the number for any other partitions).
+- Si une partition de la carte SD est monté procédez à son démontage avec la commande `umount`, par exemple `umount /dev/sdX1` (remplacez `sdX1` par le nom de périphérique de votre carte SD, et changez le numéro de la partition en fonction des besoins). Répétez cette opération pour chaque partition de votre carte SD qui est montée.
 
-### Copying the image to the SD card
+### Copier l'image sur la carte SD
 
-- In a terminal window, write the image to the card with the command below, making sure you replace the input file `if=` argument with the path to your `.img` file, and the `/dev/sdX` in the output file `of=` argument with the correct device name. **This is very important, as you will lose all the data on the hard drive if you provide the wrong device name.** Make sure the device name is the name of the whole SD card as described above, not just a partition. For example: `sdd`, not `sdds1` or `sddp1`; `mmcblk0`, not `mmcblk0p1`.
+- Dans un terminal, écrivez l'image sur la carte avec la commde suivante, tout en vous assurant de bien remplacer l'argument `if=` du fichier d'entrée par votre fichier `.img`, et l'argument `of=` du fichier de sortie `/dev/sdX` par le nom de périphérique correcte. **Très important, vous pourriez perdre des données si vous commetez une erreur d'identification du périphérique.** Assurez-vous que le nom de périphérique est bien celui de la carte SD tel décrit précédemment. Par exemple: `sdd`, et pas `sdds1` ou `sddp1`; `mmcblk0`, et pas `mmcblk0p1`.
 
     ```bash
     dd bs=4M if=2018-03-13-raspbian-stretch.img of=/dev/sdX conv=fsync
     ```
 
-- Please note that block size set to `4M` will work most of the time. If not,  try `1M`, although this will take considerably longer.
+- S'il vous plait, notez que la taille de bloc, qui est paramétrée à `4M`, fonctionnera dans la plupart des cas. Sinon, essayez  `1M`, mais dans ce cas le temps de traitement sera bien plus long.
 
-- Also note that if you are not logged in as root you will need to prefix this with `sudo`.
+- Notez aussi qui si vous n'êtes pas connecté en tant que root vous devrez préfixer votre commande par `sudo`.
 
-### Copying a zipped image to the SD card
+### Copier une image décompressée sur la carte SD
 
-In Linux it is possible to combine the unzip and SD copying process into one command, which avoids any issues that might occur when the unzipped image is larger than 4GB. This can happen on certain filesystems that do not support files larger than 4GB (e.g. FAT), although it should be noted that most Linux installations do not use FAT and therefore do not have this limitation.
+Avec Linux il est possible de combiner la décompression avec le processus de copie SD en une seule commande, ce qui peut être très utile si l'image fait plus de 4Go (en FAT), notez aussi qu'une installation Linux n'utilise pas FAT et n'a donc pas cette  limitation.
 
-The following command unzips the zip file (replace 2018-03-13-raspbian-stretch.zip with the appropriate zip filename), and pipes the output directly to the dd command. This in turn copies it to the SD card, as described in the previous section.
+La commande suivante décompresse le fichier zip (remplacez 2018-03-13-raspbian-stretch.zip par le nom approprié de votre fichier zip), et transmet directement le résultat à la commande dd. Ceci correspond à la copie sur carte SD comme décrit précédemment.
 ```
 unzip -p 2018-03-13-raspbian-stretch.zip | sudo dd of=/dev/sdX bs=4M conv=fsync
 ```
 
-### Checking the image copy progress
+### Vérification de la progression de la copie de l'image
 
-- By default, the `dd` command does not give any information about its progress, so it may appear to have frozen. It can take more than five minutes to finish writing to the card. If your card reader has an LED, it may blink during the write process. 
+- Par défaut, la commande `dd` ne donne pas d'indication sur le déroulement du processus, ainsi il peut vous sembler qu'il ne se passe rien. L'écriture sur la carte peut prendre plus de cinq minutes. Si votre lecteur de carte dispose d'une LED vous pourrez visualiser l'exécution du processus. 
 
-- To see the progress of the copy operation, you can run the dd command with the status option.
+- Pour voir le processus, vous pouvez exécuter la commande dd avec l'option de status.
    ```
     dd bs=4M if=2018-03-13-raspbian-stretch.img of=/dev/sdX status=progress conv=fsync
    ```
-- If you are using an older version of `dd`, the status option may not be available. You may be able to use the `dcfldd` command instead, which will give a progress report showing how much has been written. Another method is to send a USR1 signal to `dd`, which will let it print status information. Find out the PID of `dd` by using `pgrep -l dd` or `ps a | grep dd`. Then use `kill -USR1 PID` to send the USR1 signal to `dd`.
+- Si vous disposez d'une ancienne version de `dd`, l'option status n'est pas disponible. À la place vous pouvez utiliser la commande `dcfldd`, qui vous vous indiquera le nombre d'octets écrit. Une autre méthode est d'envoyer un signal USR1 vers `dd`, ce qui provequera l'affichage de l'information status. Recherchez le PID de `dd` en utilisant la commande `pgrep -l dd` ou `ps a | grep dd`. Puis utilisez `kill -USR1 PID` pour envoyer le signal USR1 vers `dd`.
 
-### Checking whether the image was correctly written to the SD card
+### Verification si la copie de l'image sur la carte SD s'est correctement déroulée
 
-- After `dd` has finished copying, you can check what has been written to the SD card by `dd`-ing from the card back to another image on your hard disk; truncating the new image to the same size as the original; and then running `diff` (or `md5sum`) on those two images.
+- À la fin de l'exécution de `dd`, vous pouvez vérifier ce qui a été écrit sur la carte SD en exécutant un `dd` inverse vers un autre fichier d'image; puis de tronquer la taille de cette image à la taille exacte de l'image d'origine; et, enfin, en exécutant un `diff` (ou `md5sum`) sur les deux images.
 
-- If the SD card is bigger than the original image size, `dd` will make a copy of the whole card. We must therefore truncate the new image to the size of the original image. Make sure you replace the input file `if=` argument with the correct device name. `diff` should report that the files are identical.
+- Si la carte SD est plus grande que la taille originale de l'image, `dd` fera une copie de l'ensemble de la carte. Remplacez l'argument du fichier d'entrée `if=` par le périphérique correct. `diff` devrait indiquer que les fichiers sont identiques.
 
     ```bash
     dd bs=4M if=/dev/sdX of=from-sd-card.img
@@ -58,6 +58,6 @@ unzip -p 2018-03-13-raspbian-stretch.zip | sudo dd of=/dev/sdX bs=4M conv=fsync
     diff -s from-sd-card.img 2018-03-13-raspbian-stretch.img
     ```
 
-- Run `sync`. This will ensure the write cache is flushed and that it is safe to unmount your SD card.
+- Exécutez `sync`. Cecie assurera que le cache d'écriture est vidé avant de retirer la carte SD.
 
-- Remove the SD card from the card reader.
+- Retirez la carte SD du lecteur de carte.
