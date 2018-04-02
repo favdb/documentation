@@ -1,17 +1,17 @@
-# Installing operating system images using Windows
+# Installation d'images de système d'exploitation en utilisant Windows
 
-[Etcher](https://etcher.io/) is typically the easiest option for most users to write images to SD cards, so it is a good place to start. If you're looking for an alternative on Windows, you can use `Win32DiskImager`:
+[Etcher](https://etcher.io/) est le moyen le plus simple pour la plupart des utilisateurs pour créer des images sur des cartes SD, mais voici une alternative sous Windows, vous pouvez utiliser `Win32DiskImager`:
 
 ## Win32DiskImager
 
-- Insert the SD card into your SD card reader. You can use the SD card slot if you have one, or an SD adapter in a USB port. Note the drive letter assigned to the SD card. You can see the drive letter in the left hand column of Windows Explorer, for example **G:**
-- Download the Win32DiskImager utility from the [Sourceforge Project page](http://sourceforge.net/projects/win32diskimager/) as an installer file, and run it to install the software.
-- Run the `Win32DiskImager` utility from your desktop or menu.
-- Select the image file you extracted earlier.
-- In the device box, select the drive letter of the SD card. Be careful to select the correct drive: if you choose the wrong drive you could destroy the data on your computer's hard disk! If you are using an SD card slot in your computer, and can't see the drive in the Win32DiskImager window, try using an external SD adapter.
-- Click 'Write' and wait for the write to complete.
-- Exit the imager and eject the SD card.
+- Insérez la carte SD dans votre lecteur. Vous pouvez utilisez le lecteur intégré, si vous en avez un, ou un lecteur externe brancheé sur une prise USB. Vérifiez la lettre assigné à la carte. Vous pouvez voir cette lettre dans la colonne de gauche de l'explorateur de fichier, par exemple **G:**
+- Téléchargez l'utilitaire Win32DiskImager depuis [la page du projet sur Sourceforge](http://sourceforge.net/projects/win32diskimager/), et procédez à l'installation.
+- Exécutez l'utilitaire `Win32DiskImager` depuis le menu.
+- Selectionnez le fichier contenant l'image que vous avez extrait précédemment.
+- Dans la fenêtre de périphérique sélectionnez la lettre affectée à la carte SD. Soyez attentif à bien sélectionner le bon périphérique; si vous vous trompez vous pourriez détruire les données de votre ordinateur! Si vous utilisez un lecteur intégré, et que vous ne pouvez pas voir sa lettre d'identification essayez un lecteur externe.
+- Cliquez sur 'Write' et attendez que l'écriture se termine.
+- Quittez le logiciel et éjectez la carte SD.
 
 ---
 
-*This article uses content from the eLinux wiki page [RPi_Easy_SD_Card_Setup](http://elinux.org/RPi_Easy_SD_Card_Setup), which is shared under the [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-sa/3.0/)*
+*Cet article utilise le contenu da la page wiki [RPi_Easy_SD_Card_Setup](http://elinux.org/RPi_Easy_SD_Card_Setup), qui est placée sous la licence [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-sa/3.0/)*
