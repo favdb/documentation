@@ -1,6 +1,6 @@
 # Installation d'images de système d'exploitation
 
-Ceci explique comment installer un système d'exploitation pour le Raspberry Pi sur une carte SD card. Vous aurez besoin d'un autre ordinateur avec un lecteur de carte SD pour installer l'image.
+Voici comment installer un système d'exploitation pour le Raspberry Pi sur une carte SD. Vous aurez besoin d'un autre ordinateur avec un lecteur de carte SD pour installer l'image.
 
 Nous recommandons à la plupart des utilisateurs de télécharher [NOOBS](../noobs.md), qui est spécialement conçu pour être simple à utiliser. De toute façon, pour les utilisateurs avancés, il sera intéressant de lire ceci pour installer une image particulière.
 
@@ -10,7 +10,7 @@ Les images officielles pour les systèmes d'exploitation recommandés sont dispo
 
 Des distributions alternatives sont mis à disposition par d'autres revendeurs.
 
-Si vous n'utiliser pas Etcher (voir plus loin), vous aurez besoin de décompresser les fichiers `.zip` téléchargés pour récupérer un fichier image (`.img`) à écrire sur votre carte SD.
+Si vous n'utiliseez pas Etcher (voir plus loin), vous aurez besoin de décompresser les fichiers `.zip` téléchargés pour récupérer un fichier image (`.img`) à écrire sur votre carte SD.
 
 **Note**: l'image Raspbian avec PIXEL contient une archive ZIP de 4Go et utilise le format [ZIP64](https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64). Pour décompresser l'archive, un outil de décompression supportant le ZIP64 est nécessaire. Les outils suivants supportent le ZIP64:
 
@@ -28,7 +28,7 @@ Vous devrez utiliser un outil d'écriture pour installer une image, que vous ave
 - Connectez un lecteur de carte SD, et insérez votre carte.
 - Ouvrez Etcher et sélectionnez le fichier image du Raspberry Pi (`.img` ou `.zip`) que vous souhaitez écrire sur la carte SD.
 - Selectionnez la carte SD sur laquelle écrire l'image.
-- Vérifiez vos sélections et appuyez sur 'Flash!' pour commence l'écriture des données sur la carte SD.
+- Vérifiez vos sélections et appuyez sur 'Flash!' pour commencer l'écriture des données sur la carte SD.
 
 Pour le contrôle avancé du processus, reportez-vous à notre guide spécifique à votre système:
 
