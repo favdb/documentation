@@ -1,6 +1,6 @@
-# Raspberry Pi Hardware
+# Le hardware du Raspberry Pi
 
-Informations techniques matériel sur le Raspberry Pi, y compris les ajouts officiels et le Pi lui-même.
+Informations techniques matérielles sur le Raspberry Pi, y compris les ajouts officiels et le Pi lui-même.
 
 ## Contenu
 
