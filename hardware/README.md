@@ -1,12 +1,12 @@
 # Raspberry Pi Hardware
 
-Technical information about Raspberry Pi hardware, including official add-ons and the Pi itself.
+Informations techniques matériel sur le Raspberry Pi, y compris les ajouts officiels et le Pi lui-même.
 
-## Contents
+## Contenu
 
 - [Raspberry Pi](raspberrypi/README.md)
-- [Camera Module](camera/README.md)
-- [Compute Module](computemodule/README.md)
-- [Sense HAT](sense-hat/README.md)
-- [Display](display/README.md)
-- [Industrial use](industrial/README.md)
+- [Module Camera](camera/README.md)
+- [Module de Calcul](computemodule/README.md)
+- [Capteur HAT](sense-hat/README.md)
+- [Affichage](display/README.md)
+- [Utilisation Industrielle](industrial/README.md)
