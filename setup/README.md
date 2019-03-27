@@ -2,34 +2,34 @@
 
 A guide to setting up your Raspberry Pi
 
-## What you will need
+## De quoi avez-vous besoin
 
-### Essential (for general use)
+### L'Essentiel (pour un usage général)
 
-- [SD Card](../installation/sd-cards.md)
-    - We recommend an 8GB class 4 SD card, ideally preinstalled with [NOOBS](../installation/noobs.md).
-- [Display and connectivity cable](monitor-connection.md)
-    - Any HDMI/DVI monitor and any TV should work as a display for the Pi. For best results, use one with HDMI input, but other connections are available for older devices.
-- Keyboard and mouse
-    - Any standard USB keyboard and mouse will work with your Raspberry Pi.
-    - Wireless keyboards and mice will work if already paired.
-    - For keyboard layout configuration options see [raspi-config](../configuration/raspi-config.md).
-- [Power supply](../hardware/raspberrypi/power/README.md)
-    - The Pi is powered by a USB Micro power supply (like most standard mobile phone chargers).
-    - You'll need a good-quality power supply that can supply at least 2A at 5V for the Model 3B, or 700mA at 5V for the earlier, lower powered models.
-    - Low current (~700mA) power supplies will work for basic usage, but are likely to cause the Pi to reboot if it draws too much power.
+- [Carte SD](../installation/sd-cards.md)
+    - Il est recommandé d'utiliser une crte SD de 8Go classe 4, idéalement présintallée avec [NOOBS](../installation/noobs.md).
+- [Affichage](monitor-connection.md)
+    - Tout moniteur HDMI/DVI et n'importe quelle TV fonctionnera pour l'affichage. Pour de meilleurs résultats utilisez la solution HDMI, mais d'autres connexions sont possibles pour d'anciens matériels.
+- Clavier et souris
+    - Tout clavier ou souris USB fera l'affaire.
+    - Les claviers, ou souris, sans fil fonctionneront aussi à condition d'être appairés.
+    - Pour la configuration de la disposition du clavier voir [raspi-config](../configuration/raspi-config.md).
+- [Alimentation électrique](../hardware/raspberrypi/power/README.md)
+    - Le Pi est alimenté au moyen d'une prise Micro USB (comme pour la plupart des chargeurs de mobiles).
+    - Vous aurez besoin d'une alimentation de bonne qualité fournissan au moins 2A sous 5V pour le modèle 3B, ou 700mA sous 5V pour les modèles plus récents.
+    - Une alimentation de faible puissance (~700mA) sera suffisante pour un usage basique, mais ça risque de provoquer un reboot du PI si une puissance supplémentaire est demandée.
 
-### Optional
+### Options
 
-- Ethernet (network) cable [Model B/B+/2/3 only]
-    - An Ethernet cable is used to connect your Pi to a local network and the internet.
-- [USB wireless dongle](../configuration/wireless/README.md)
-    - Alternatively, you can connect to a wireless network using a USB wireless dongle, which will require configuration.
-- Audio lead
-    - Audio can be played through speakers or headphones using a standard 3.5mm jack.
-    - Without an HDMI cable, an audio lead is necessary to produce sound.
-    - No separate audio lead is necessary if you're using an HDMI cable to connect to a monitor with speakers, as audio can be played directly through the display; but it is possible to connect one if you prefer to have the audio played through other speakers - this requires [configuration](../configuration/audio-config.md).
+- Cable Ethernet (réseau) [Modèles B/B+/2/3 seulement]
+    - Le cable Ethernet est utilisé pour connecter votre Pi à votre réseau local et à Internet.
+- [Dongle USB sans fil](../configuration/wireless/README.md)
+    - Vous pouvez aussi vous connecter à un réseau sans fil en utilisant un dongle USB, ce qui nécessitera une configuration spéciale.
+- Audio
+    - L'audio peut sortir via des haut-parleurs ou des écouteurs en utilisant une prise Jack standard 3.5mm.
+    - Sans cable HDMI, un système audio externe sera nécessaire pour le son.
+    - Toutefois vous n'avez pas besoin d'un système audio externe si vous utilisez le HDMI pour une connection à un moniteur équipé de haut-parleurs, puisque l'audio peut être restitué par celui-ci; mais il reste possible de connecter un système externe si vous le souhaitez - ça nécessitera une [configuration](../configuration/audio-config.md) spéciale.
 
-## Troubleshooting
+## Difficultés
 
-For any issues during setup, search [the forums](https://www.raspberrypi.org/forums/) for a solution. If you cannot find one, please post your problem, providing as much detail as possible.
+Pour tout problème de paramétrage cherchez la solution sur [les forums](https://www.raspberrypi.org/forums/). Si vous ne trouvez pas la réponse, postez votre problème en fournissant un maximum de détails.
