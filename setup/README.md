@@ -1,6 +1,6 @@
-# Setup
+# Paramètres
 
-A guide to setting up your Raspberry Pi
+Un guide rapide pour paramétrer votre Raspberry Pi
 
 ## De quoi avez-vous besoin
 
